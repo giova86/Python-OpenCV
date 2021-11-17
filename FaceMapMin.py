@@ -18,6 +18,7 @@ with mp_face_mesh.FaceMesh(
     min_tracking_confidence=0.5) as face_mesh:
   while cap.isOpened():
     success, image = cap.read()
+
     if not success:
         print("Ignoring empty camera frame.")
         # If loading a video, use 'break' instead of 'continue'.
